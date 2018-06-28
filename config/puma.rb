@@ -9,9 +9,9 @@ threads_max = ENV.fetch("RAILS_MAX_THREADS") { 1 }
 environment ENV.fetch("RAILS_ENV") { "development" }
 
 if ENV.fetch("RAILS_ENV") { "?" } == "development"
-  threads 1, threads_max
+  threads 5, threads_max
 else
-  threads 1, threads_max
+  threads 5, threads_max
   # workers 2
   stdout_redirect 'log/puma.access.log', 'log/puma.error.log', true
   pidfile "tmp/pids/puma.pid"

@@ -22,7 +22,7 @@ set -e
 set -o pipefail
 
 version=0.1.1
-local_port=3000
+local_port=80
 local_image=local_pluosi/app_host:$version
 container_name=app_host
 dockerdir=$(cd "$(dirname "$(dirname $0)")"; pwd -P)
